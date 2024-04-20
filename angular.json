@@ -11,8 +11,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "customWebpackConfig": {
+              "path": "projects/mfe/webpack.config.js"
+            },
             "outputPath": "dist/mfe",
             "index": "projects/mfe/src/index.html",
             "main": "projects/mfe/src/main.ts",
@@ -57,7 +60,10 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
+          "options": {
+            "browserTarget": "mfe:build"
+          },
           "configurations": {
             "production": {
               "browserTarget": "mfe:build:production"
@@ -102,8 +108,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "customWebpackConfig": {
+              "path": "projects/shell/webpack.config.js"
+            },
             "outputPath": "dist/shell",
             "index": "projects/shell/src/index.html",
             "main": "projects/shell/src/main.ts",
@@ -148,7 +157,10 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
+          "options": {
+            "browserTarget": "shell:build"
+          },
           "configurations": {
             "production": {
               "browserTarget": "shell:build:production"
