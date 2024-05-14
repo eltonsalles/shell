@@ -19,6 +19,7 @@
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
     "component-library": "file:../flame/packages/angular-workspace/dist/component-library/component-library-1.0.16.tgz",
+    "lib-web-components": "file:../flame/packages/lib-web-components/lib-web-components-0.0.3.tgz",
     "rxjs": "~7.8.0",
     "stencil-library": "file:../flame/packages/stencil-library/stencil-library-1.0.16.tgz",
     "tslib": "^2.3.0",
