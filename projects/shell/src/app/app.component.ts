@@ -22,15 +22,15 @@ export class AppComponent implements OnInit {
   }
 
   injectMfe(): void {
-    // const vendor = this.renderer2.createElement('script');
-    // this.renderer2.setAttribute(vendor, 'src', 'http://localhost:4444/vendor.js');
-    // this.renderer2.setAttribute(vendor, 'type', 'text/javascript');
-    // this.renderer2.appendChild(this.document.head, vendor);
-    //
-    // const runtime = this.renderer2.createElement('script');
-    // this.renderer2.setAttribute(runtime, 'src', 'http://localhost:4444/runtime.js');
-    // this.renderer2.setAttribute(runtime, 'type', 'text/javascript');
-    // this.renderer2.appendChild(this.document.head, runtime);
+    const vendor = this.renderer2.createElement('script');
+    this.renderer2.setAttribute(vendor, 'src', 'http://localhost:4444/vendor.js');
+    this.renderer2.setAttribute(vendor, 'type', 'text/javascript');
+    this.renderer2.appendChild(this.document.head, vendor);
+
+    const runtime = this.renderer2.createElement('script');
+    this.renderer2.setAttribute(runtime, 'src', 'http://localhost:4444/runtime.js');
+    this.renderer2.setAttribute(runtime, 'type', 'text/javascript');
+    this.renderer2.appendChild(this.document.head, runtime);
 
     const main = this.renderer2.createElement('script');
     this.renderer2.setAttribute(main, 'src', 'http://localhost:4444/main.js');
